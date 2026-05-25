@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dbwp4w3xk5yct"]
+
+[ext_resource type="Script" uid="uid://bnqwcu4bfw3fx" path="res://character_body_3d.gd" id="1_iwpo4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fb3t6"]
+size = Vector3(1, 1, 1.0112305)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vd578"]
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1117745969]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 2, -0.3624705, 1.4790502, -0.5818815)
+axis_lock_linear_y = true
+script = ExtResource("1_iwpo4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1009887221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016213417, 0.002712369, -0.0056152344)
+shape = SubResource("BoxShape3D_fb3t6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=601734440]
+mesh = SubResource("BoxMesh_vd578")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1804119160]

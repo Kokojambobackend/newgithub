@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://l1dc8t8rtvpp"]
+
+[ext_resource type="PackedScene" uid="uid://cadcyi2osg084" path="res://player.tscn" id="1_ig7tw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
+size = Vector3(1, 1, 1.0115967)
+
+[node name="Main" type="Node3D" unique_id=2006327176]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=662419976]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+rotation_order = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=555717315]
+transform = Transform3D(10, 0, 0, 0, 0.205, 0, 0, 0, 10, 0.6956274, 0.0941721, -10.887605)
+rotation_order = 0
+mesh = SubResource("BoxMesh_ig7tw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1609828911]
+transform = Transform3D(10, 0, 0, 0, 0.2, 0, 0, 0, 10, 0.6898972, 0.10898667, -10.9402485)
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="Player" parent="." unique_id=1418235385 instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.51272, 5.1120057, -128.12143)
+rotation_order = 0
+axis_lock_linear_y = false
