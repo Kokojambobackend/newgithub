@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cqfvvi11ujqvk"]
+
+[ext_resource type="Texture2D" uid="uid://jsagvnhodfu1" path="res://PSX_Forest_Level_byStarkCrafts/PSX_ForestGround_Tex/PSX_Seamless_ForestWildGround_128px.png" id="1_noarx"]
+[ext_resource type="PackedScene" uid="uid://bfnt73eaye3x0" path="res://PSX_Forest_Level_byStarkCrafts/PSX_Forest_AssetCollection_byStarkCrafts.fbx" id="2_a0tk4"]
+[ext_resource type="Script" uid="uid://yo33tpvpvkwf" path="res://camera_3d.gd" id="3_a0tk4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3fl7"]
+albedo_texture = ExtResource("1_noarx")
+
+[sub_resource type="BoxMesh" id="BoxMesh_jka67"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i5arm"]
+
+[sub_resource type="Environment" id="Environment_wc5p8"]
+background_mode = 1
+background_color = Color(0, 0, 0.4491147, 1)
+fog_enabled = true
+fog_light_color = Color(0.14387436, 0.14704196, 0.087997064, 1)
+fog_light_energy = 2.11
+fog_density = 0.0103
+fog_sky_affect = 0.185
+
+[node name="Node3D" type="Node3D" unique_id=322838611]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=281847939]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, -0.0003297329, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=2059650010]
+transform = Transform3D(20, 0, 0, 0, 0.9999426, -0.21432234, 0, 0.010716117, 19.998852, 0.038288057, 0.034468055, 0.14216116)
+material_override = SubResource("StandardMaterial3D_r3fl7")
+mesh = SubResource("BoxMesh_jka67")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1502847575]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0.0003297329, 0, 0)
+shape = SubResource("BoxShape3D_i5arm")
+
+[node name="PSX_Forest_AssetCollection_byStarkCrafts" parent="." unique_id=1945203099 instance=ExtResource("2_a0tk4")]
+transform = Transform3D(0.99052864, 0, -0.13730624, 0, 1, 0, 0.13730624, 0, 0.99052864, 2.083499, 1.3975496, 0.7718911)
+
+[node name="PSX_Forest_AssetCollection_byStarkCrafts2" parent="." unique_id=1418561280 instance=ExtResource("2_a0tk4")]
+transform = Transform3D(-0.884181, -0.0013088271, -0.4671427, -0.0011474014, 0.99999917, -0.0006300333, 0.4671431, -2.1063313e-05, -0.88418174, 18.137161, 1.742599, -7.111782)
+
+[node name="PSX_Forest_AssetCollection_byStarkCrafts3" parent="." unique_id=1298282362 instance=ExtResource("2_a0tk4")]
+transform = Transform3D(0.92358494, 0.000818173, -0.38339305, -0.0011474014, 0.99999917, -0.0006300333, 0.3833922, 0.001021795, 0.9235851, 1.360611, 1.8597713, 26.181866)
+
+[node name="PSX_Forest_AssetCollection_byStarkCrafts4" parent="." unique_id=1464466336 instance=ExtResource("2_a0tk4")]
+transform = Transform3D(0.44274265, -5.6915047e-05, -0.89664876, -0.0011474014, 0.99999917, -0.0006300333, 0.8966481, 0.0013077587, 0.4427422, -28.376755, 1.8597713, -28.529568)
+
+[node name="PSX_Forest_AssetCollection_byStarkCrafts5" parent="." unique_id=1942362134 instance=ExtResource("2_a0tk4")]
+transform = Transform3D(-0.8624953, -0.0013084665, -0.5060632, -0.0011474012, 0.99999905, -0.0006300328, 0.50606376, 3.7256686e-05, -0.86249644, 32.54031, 0.48728228, 50.88147)
+
+[node name="PSX_Forest_AssetCollection_byStarkCrafts6" parent="." unique_id=32394565 instance=ExtResource("2_a0tk4")]
+transform = Transform3D(0.70351845, 0.0003594681, -0.7106773, -0.0011474012, 0.999999, -0.00063003274, 0.710676, 0.001258672, 0.70351815, 55.303394, 0.48728228, 2.6611195)
+
+[node name="PSX_Forest_AssetCollection_byStarkCrafts7" parent="." unique_id=1393188516 instance=ExtResource("2_a0tk4")]
+transform = Transform3D(-0.8774218, -0.0013089946, -0.4797175, -0.0011474012, 0.999999, -0.00063003274, 0.4797182, -2.376415e-06, -0.8774229, 70.85765, 0.48728228, 31.03997)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=840798495]
+environment = SubResource("Environment_wc5p8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1862635014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.077179, 46.664032, 23.339865)
+light_color = Color(0.8909661, 0.9997384, 0.9999998, 1)
+light_energy = 16.0
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=138062231]
+transform = Transform3D(0.86741495, -0.011744151, 0.49744692, 0.21091293, 0.91414744, -0.346194, -0.45067406, 0.40521184, 0.7954221, 34.231953, 3.7597094, 16.933502)
+fov = 51.50167
+script = ExtResource("3_a0tk4")
