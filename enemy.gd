@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var weakness = "magic"
+
 var hp = 100
 var damage = 10
 
@@ -45,4 +45,17 @@ func attack():
 	await get_tree().create_timer(1.5).timeout
 
 	can_attack = true
+	
+	
+func take_damage(amount):
+	hp -= amount
+	
+	print("Враг получил урон")
+	
+	if hp <= 0:
+		die()
+		
+func die():
+	print("Враг умер")
+	queue_free()
 	
