@@ -4,6 +4,7 @@ extends CharacterBody3D
 var hp = 100
 var damage = 10
 
+@onready var enemy_bar = $"../CanvasLayer/EnemyHp"
 
 @export var speed := 3.0
 @export var attack_range := 2.0
@@ -54,8 +55,12 @@ func take_damage(amount):
 	
 	if hp <= 0:
 		die()
-		
+	enemy_bar.value = hp
 func die():
 	print("Враг умер")
 	queue_free()
+
+
+func _process(delta):
+	enemy_bar.value = hp
 	

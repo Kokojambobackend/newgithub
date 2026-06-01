@@ -44,7 +44,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.497498, 4.945058, -126.38
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1017535637]
 transform = Transform3D(-0.92961574, 0, -0.3685303, 0, 1, 0, 0.3685303, 0, -0.92961574, 2375.543, 2784.2043, -3074.0466)
-light_energy = 2.785
+light_energy = 2.014
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2048146019]
 
@@ -53,6 +53,13 @@ offset_left = 407.0
 offset_top = 7.0
 offset_right = 696.0
 offset_bottom = 50.0
+value = 100.0
+
+[node name="EnemyHp" type="ProgressBar" parent="CanvasLayer" unique_id=1081198015]
+offset_left = 424.0
+offset_top = 63.0
+offset_right = 686.0
+offset_bottom = 90.0
 value = 100.0
 
 [editable path="Player"]
