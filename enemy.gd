@@ -45,7 +45,7 @@ func attack():
 	await get_tree().create_timer(1.5).timeout
 
 	can_attack = true
-	
+
 	
 func take_damage(amount):
 	hp -= amount

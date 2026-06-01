@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cqfvvi11ujqvk"]
 
-[ext_resource type="Texture2D" uid="uid://jsagvnhodfu1" path="res://PSX_Forest_Level_byStarkCrafts/PSX_ForestGround_Tex/PSX_Seamless_ForestWildGround_128px.png" id="1_noarx"]
-[ext_resource type="PackedScene" uid="uid://bfnt73eaye3x0" path="res://PSX_Forest_Level_byStarkCrafts/PSX_Forest_AssetCollection_byStarkCrafts.fbx" id="2_a0tk4"]
+[ext_resource type="Texture2D" uid="uid://jsagvnhodfu1" path="res://models/PSX_Forest_Level_byStarkCrafts/PSX_ForestGround_Tex/PSX_Seamless_ForestWildGround_128px.png" id="1_noarx"]
+[ext_resource type="PackedScene" uid="uid://bfnt73eaye3x0" path="res://models/PSX_Forest_Level_byStarkCrafts/PSX_Forest_AssetCollection_byStarkCrafts.fbx" id="2_a0tk4"]
 [ext_resource type="Script" uid="uid://yo33tpvpvkwf" path="res://camera_3d.gd" id="3_a0tk4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3fl7"]

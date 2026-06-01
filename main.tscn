@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cadcyi2osg084" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://kx36tcor82sf" path="res://enemy.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://c1runvc0swp5e" path="res://models/топор1.glb" id="2_h2yge"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
 
@@ -28,9 +29,30 @@ transform = Transform3D(10, 0, 0, 0, 0.2, 0, 0, 0, 10, 0.6898972, 0.10898667, -1
 shape = SubResource("BoxShape3D_ig7tw")
 
 [node name="Player" parent="." unique_id=1418235385 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.77152, 3.8263955, -128.12143)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.77152, 5.030546, -128.12143)
 rotation_order = 0
 axis_lock_linear_y = false
 
+[node name="Camera3D" parent="Player" index="0" unique_id=589368952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.587275, 0)
+
+[node name="axe" parent="Player/Camera3D" index="0" unique_id=733474908 instance=ExtResource("2_h2yge")]
+transform = Transform3D(-0.04472052, 0, -0.0050075124, 0, 0.045, 0, 0.0050075124, 0, -0.04472052, 0.5740166, -0.817132, -0.61657715)
+
 [node name="enemy" parent="." unique_id=2098724909 instance=ExtResource("2_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.497498, 4.945058, -126.38925)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1017535637]
+transform = Transform3D(-0.92961574, 0, -0.3685303, 0, 1, 0, 0.3685303, 0, -0.92961574, 2375.543, 2784.2043, -3074.0466)
+light_energy = 2.785
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2048146019]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=2137261324]
+offset_left = 407.0
+offset_top = 7.0
+offset_right = 696.0
+offset_bottom = 50.0
+value = 100.0
+
+[editable path="Player"]

@@ -6,8 +6,11 @@ var mouse_sens = 0.002
 var hp = 100
 var dead = false
 var damage = 25
+var can_attack = true
 
+@onready var hp_bar = $"../CanvasLayer/ProgressBar"
 @onready var camera = $Camera3D
+@onready var axe = $Camera3D/axe
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -52,6 +55,8 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _process(delta):
+	hp_bar.value = hp
+	
 	if hp <= 0 and not dead:
 		die()
 
@@ -62,6 +67,12 @@ func die():
 	
 	#АТАКА
 func attack():
+	if not can_attack:
+		return
+		
+	can_attack = false
+	
+	
 
 	var enemies = get_tree().get_nodes_in_group("enemy")
 
@@ -71,4 +82,8 @@ func attack():
 
 		if distance < 3:
 			enemy.take_damage(damage)
+			
+	await get_tree().create_timer(1.0).timeout
+	
+	can_attack = true
 	
